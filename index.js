@@ -2,7 +2,7 @@ const app = require('express')()
 const http = require('http').Server(app)
 
 const host = '0.0.0.0'
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 5000
 
 app.set('port', port)
 http.listen(port, host)
