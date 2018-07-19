@@ -14,7 +14,7 @@ module.exports = {
 
     io.on('connection', (socket) => {
       socket.emit('SET_ID', socket.id)
-      connect(io, socket, data)
+      connect(io, socket)
 
       socket.on('register', (data) => {
         register(io, socket, data)

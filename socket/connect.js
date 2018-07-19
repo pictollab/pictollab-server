@@ -1,6 +1,4 @@
-module.exports = function (io, socket, data) {
-  console.log(data)
-
+module.exports = function (io, socket) {
   axios.post(`https://${ process.env.LOG_ENDPOINT }.localtunnel.me/log/server/connect`, {
     id: socket.id,
     event: {
