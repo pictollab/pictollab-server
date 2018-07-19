@@ -1,5 +1,6 @@
 const socket = require('socket.io')
 
+const connect = require('./connect')
 const disconnect = require('./disconnect')
 const event = require('./event')
 const upload = require('./upload')
@@ -13,6 +14,7 @@ module.exports = {
 
     io.on('connection', (socket) => {
       socket.emit('SET_ID', socket.id)
+      connect(io, socket, data)
 
       socket.on('register', (data) => {
         register(io, socket, data)
