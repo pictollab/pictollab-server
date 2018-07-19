@@ -12,9 +12,9 @@ module.exports = function (io, socket, data) {
       timestamp: time.now()
     }
   }).then(function (res) {
-    console.log(res);
+    // console.log(res);
   })
   .catch(function (err) {
-    console.log(err);
+    // console.log(err);
   })
 }
