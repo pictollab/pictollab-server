@@ -3,7 +3,10 @@ const axios = require('axios')
 module.exports = function (io, socket, data) {
   console.log(data)
 
-  axios.post(`https://${ process.env.LOG_ENDPOINT }.localtunnel.me/log/user/event`, data)
+  axios.post(`https://${ process.env.LOG_ENDPOINT }.localtunnel.me/log/user/event`, {
+    id: socket.id,
+    event: data
+  })
   .then(function (res) {
     console.log(res);
   })
