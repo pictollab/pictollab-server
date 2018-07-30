@@ -2,7 +2,7 @@ const axios = require('axios')
 const time = require('../utils/time')
 
 module.exports = function (io, socket, data) {
-  console.log(data)
+  // console.log(data)
 
   axios.post(`https://${ process.env.LOG_ENDPOINT }.localtunnel.me/log/server/disconnect`, {
     id: socket.id,
